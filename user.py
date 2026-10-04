@@ -1,10 +1,10 @@
-"""SavageXx Users - clean offline forge. Purpose: readable kremlin-class names. Inputs: count. Outputs: console table + SavageXx.txt."""
+"""SavageXx Users - clean offline forge. Purpose: readable savagexx-class names. Inputs: count. Outputs: console table + SavageXx.txt."""
 import os, random
 
 OUTPUT_FILE = "SavageXx.txt"
 
-os.system("")  # enables VT on Win10+, no-op elsewhere
-USE_COLOR = True  # set False for zero codes
+os.system("") 
+USE_COLOR = True  
 
 def c(code, s):
     return f"\033[{code}m{s}\033[0m" if USE_COLOR else s
@@ -14,13 +14,13 @@ CY = lambda s: c("96", s)
 Y = lambda s: c("93", s)
 
 BANNER = r"""
- _  __               _    _
-| |/ /_ __ ___ _ __ | | Habana
-| ' /| '__/ _ \ '_ \| | (_)\
-| . \| | |  __/ | | | |___ _ 
-|_|\_\_|  \___|_| |_|_____(_)
-""".replace("Habana", "mlin").replace("(_)", "(_)")
-
+ ____                                 __  __
+/ ___|  __ _ __   ____ _  __ _  ___  \ \/ /__  __
+\___ \ / _` |\ \ / / _` |/ _` |/ _ \  \  / \ \/ /
+ ___) | (_| | \ V / (_| | (_| |  __/  /  \  >  <
+|____/ \__,_|  \_/ \__,_|\__, |\___| /_/\_\/_/\_\
+                         |___/
+"""
 
 LETTERS = "abcdefghijklmnopqrstuvwxyz"
 RARE = "qwxzjk"
@@ -40,7 +40,7 @@ def forge(n=32):
 
 def show(names):
     print(CY(BANNER))
-    print(Y("== Kremlin Users | kremlin-class | HeMa =="))
+    print(Y("== SavageXx Users | savagexx-class | SavageXx =="))
     print("-" * 44)
     for i, name in enumerate(names, 1):
         print(f"{i:02d}. {G(name):<16}", end="\n" if i % 4 == 0 else "")
